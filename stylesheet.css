@@ -1,0 +1,41 @@
+html body {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    padding: 3rem;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+.header {
+    height: 95vh;
+    margin: 0 auto;
+    background-image: linear-gradient(to bottom right, rgba(16, 214, 92, 0.6), rgba(19, 160, 216, 0.6), rgba(243, 210, 20, 0.6)),url('img/hero-2.jpg');
+    background-size: cover;
+    clip-path: polygon(50% 0%, 100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
+    -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
+}
+
+.nav {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.header__logo {
+    display: flex;
+    height: 10rem;
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
