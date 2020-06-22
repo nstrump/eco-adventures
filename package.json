@@ -1,0 +1,22 @@
+{
+  "name": "eco-adventures",
+  "version": "1.0.0",
+  "description": "Brochure site for ecotourist venture.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nstrump/eco-adventures.git"
+  },
+  "author": "Nathan Trump",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nstrump/eco-adventures/issues"
+  },
+  "homepage": "https://github.com/nstrump/eco-adventures#readme",
+  "devDependencies": {
+    "node-sass": "^4.14.1"
+  }
+}
