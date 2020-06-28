@@ -77,16 +77,6 @@ html body {
           box-sizing: border-box;
 }
 
-html {
-  font-size: 62.5%;
-}
-
-body {
-  font-family: 'Antic', sans-serif;
-  font-size: 16px;
-  color: #0f0f0f #0f0f0f;
-}
-
 *,
 *::before,
 *::after {
@@ -94,6 +84,20 @@ body {
   padding: 0;
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
+}
+
+body {
+  font-family: 'Antic', sans-serif;
+  font-size: 16px;
+  color: #0f0f0f;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.text--center {
+  text-align: center;
 }
 
 .btn:link,
@@ -199,9 +203,5 @@ body {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-}
-
-.text--center {
-  text-align: center;
 }
 /*# sourceMappingURL=main.css.map */
