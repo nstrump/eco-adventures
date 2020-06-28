@@ -1,0 +1,30 @@
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+
+@import "components/btn";
+
+@import "layout/header";
+
+@import "pages/home";
+
+
+.nav {
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+
+
+.text--center {
+    text-align: center;
+}
+
+
+

@@ -1,0 +1,33 @@
+.typewriter {
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    animation: typing 7s steps(40, end);
+}
+
+@keyframes typing {
+    from {width: 0}
+    to {width: 100%}
+}
+
+.fadeIn {
+    opacity: 0;
+    animation: 8s ease 0s normal forwards 1 fadein;
+}
+
+@keyframes fadein{
+    0% { opacity:0; }
+    55% { opacity:0; }
+    100% { opacity:1; }
+}
+
+.btn--fadeIn {
+    opacity: 0;
+    animation: 12s ease 0s normal forwards 1 fadein;
+}
+
+@keyframes fadein{
+    0% { opacity:0; }
+    55% { opacity:0; }
+    100% { opacity:1; }
+}

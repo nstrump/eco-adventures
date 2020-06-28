@@ -1,0 +1,43 @@
+.header {
+    height: 95vh;
+    margin: 0 auto;
+    background-image: linear-gradient(to bottom right, rgba($color-main-green, 0.6), rgba($color-main-blue, 0.6), rgba($color-main-gold, 0.6)),url('../img/hero-2.jpg');
+    background-size: cover;
+    clip-path: polygon(50% 0%, 100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
+    -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 87%, 50% 100%, 0 87%, 0 0);
+}
+
+.header__logo {
+    display: flex;
+    height: 10rem;
+    margin-top: 3rem;
+    margin-left: 3rem;
+}
+
+.header__text-box {
+    /*font-family: 'Amatic SC', cursive;
+    font-family: 'Homemade Apple', cursive;*/
+    
+    font-family: 'Special Elite', cursive;
+    font-weight: 400;
+    padding-top: 5rem;
+    line-height: 1.2;
+    color: rgba($color-main-black, 0.904);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.header__title {
+    font-size: 7rem;
+    font-weight: inherit;
+    letter-spacing: 1.25rem;
+    line-height: 1.5;
+}
+
+.header__slogan {
+    font-size: 3rem;
+    font-weight: 100;
+    letter-spacing: 3.1rem;
+    text-transform: uppercase; 
+}
