@@ -1,0 +1,11 @@
+.info-panel {
+    padding-left: 8rem;
+    padding-right: 5rem;
+    position: relative;
+
+    &__icon {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+}

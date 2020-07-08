@@ -1,4 +1,46 @@
 .nav {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
+
+    &__box {
+        margin-top: 4.75rem;
+        margin-right: 3rem;
+        display: inline-block;
+        height: 100px;
+        position: relative;
+        z-index: 50;
+    }
+
+    &__checkbox {
+        display: none;
+        margin: 0 auto;
+    }
+
+    &__icon,
+    &__icon::before,
+    &__icon::after {
+        width: 3rem;
+        height: 3px;
+        background-color: $color-main-black;
+        display: inline-block;
+    }
+
+    &__icon {
+        
+    }
+
+    &__icon::before {
+        content: "";
+        top: 2.5rem;
+        position: absolute;
+    }
+
+    &__icon::after {
+        content: "";
+        position: absolute;
+        top: 3.8rem;
+    }
+
+
 }
+

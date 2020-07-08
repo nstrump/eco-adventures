@@ -1,6 +1,23 @@
+/////////////////////////////////////////
+//COLORS
+/////////////////////////////////////////
+
 $color-main-blue: rgb(19, 160, 216);
+$color-secondary-blue: darken(rgb(19, 160, 216), 20%);
 $color-main-green: rgb(6, 214, 92);
+$color-secondary-green: darken(rgb(6, 214, 92), 20%);
 $color-main-gold: rgb(243, 210, 20);
-$color-secondary-gold: #C5B548;
+$color-secondary-gold: darken(rgb(243, 210, 20), 20%);
+$color-brass: #C5B548;
 $color-main-black: rgb(15, 15, 15);
-$color-main-white: #fff;
+$color-main-white: rgb(255, 247, 247);
+$color-main-grey: rgb(230, 222, 222);
+
+
+
+////////////////////////////////////
+//FONTS
+////////////////////////////////////
+
+$font-secondary: 'Special Elite', cursive;
+$font-primary: 'Antic', sans-serif;

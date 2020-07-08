@@ -19,7 +19,7 @@
 
 .btn--blk {
     background-color: rgba($color-main-black, .95);
-    color: $color-secondary-gold;
+    color: $color-brass;
 }
 
 .btn:hover {
@@ -27,7 +27,7 @@
     transform: translateY(-3px);
 }
 .btn--blk:hover {
-    background-color: $color-secondary-gold;
+    background-color: $color-brass;
     color:  rgb(15, 15, 15);
 }
 

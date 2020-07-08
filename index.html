@@ -8,7 +8,6 @@
         <meta name="author" content="Nathan Trump">
         <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Antic&display=swap" rel="stylesheet">
         <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
@@ -21,11 +20,17 @@
         <meta name="theme-color" content="#ffffff">
         <link rel="stylesheet" href="sass/main.css">
     </head>
-    <body>
+    <body class="site__container">
         <header role="header" class="header">
             <nav role="navigation" class="nav">
                 <div class="header__logo">
-                    <img src="svg/mountains-and-sun-svgrepo-com.svg" alt="Logo for Eco-Adventures." class="logo">
+                    <img src="img/svg/mountains-and-sun-svgrepo-com.svg" alt="Logo for Eco-Adventures." class="logo">
+                </div>
+                <div class="nav__box">
+                    &nbsp;
+                    <input type="checkbox" class="nav__checkbox" id="nav-toggle">
+                        <span class="nav__icon"></span>
+                    </label>     
                 </div>
             </nav>
             <div class="header__text-box">
@@ -35,10 +40,229 @@
             <a href="#" class="btn btn--blk btn--fadeIn" role="button">Explore trips</a> 
         </header>
         <main>
+            <div class="section-about">
+                <h2 class="heading text--center mrgn-top--big mrgn-btm--big">Travel the Globe, Leave No Trace</h2>
+                <div class="row">
+                    <div class="flex-row">
+                        <div class="flex-col">
+                            <div class="info-panel">
+                                <svg class="icon info-panel__icon">
+                                    <use xlink:href="/img/svg/sprite.svg#head-svgrepo-com"></use>
+                                </svg>
+                                <h3 class="sub-heading mrgn-btm--sm">Harmonize mind, body, and spirit with nature</h3>
+                                <p class="info mrgn-btm--med">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit et ullam, quos libero sed, impedit id dolores optio, velit accusantium sequi nesciunt. Animi voluptas unde architecto totam consectetur iste error.</p>    
+                            </div>
+                        </div>
+                        <div class="flex-col">
+                            <div class="info-panel">
+                                <svg class="icon info-panel__icon">
+                                    <use xlink:href="/img/svg/sprite.svg#direction-arrows-svgrepo-com"></use>
+                                </svg>
+                                <h3 class="sub-heading mrgn-btm--sm">Where you want to go, what you want to do</h3>
+                                <p class="info mrgn-btm--med">Lorem ipsum dolor sit amet consectetur adipisicing
+                                     elit. Sit et ullam, quos libero sed, impedit id dolores optio, velit
+                                      accusantium sequi nesciunt. Animi voluptas unde architecto totam consectetur
+                                       iste error. Lorem ipsum dolor sit amet consectetur adipisicing
+                                       elit. Sit et ullam, quos libero sed, impedit id dolores optio, velit
+                                        accusantium sequi nesciunt. Animi voluptas unde architecto totam consectetur
+                                         iste error.
+                                </p>    
+                            </div>
+                        </div>                       
+                    </div>
+                    <div class="flex-row">
+                        <div class="flex-col">
+                            <div class="info-panel">
+                                <svg class="icon info-panel__icon">
+                                    <use xlink:href="/img/svg/sprite.svg#world-wide-signal-svgrepo-com"></use>
+                                  </svg>
+                                <h3 class="sub-heading mrgn-btm--sm">For one, for all</h3>
+                                <p class="info mrgn-btm--med">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit et ullam, quos libero sed, impedit id dolores optio, velit accusantium sequi nesciunt. Animi voluptas unde architecto totam consectetur iste error.</p>    
+                            </div>
+                        </div>
+                        <div class="flex-col">
+                            <div class="info-panel">
+                                <svg class="icon info-panel__icon">
+                                    <use xlink:href="/img/svg/sprite.svg#sea-placeholder-svgrepo-com"></use>
+                                  </svg>
+                                <h3 class="sub-heading mrgn-btm--sm">Countless global destinations</h3>
+                                <p class="info mrgn-btm--med">Lorem ipsum dolor sit amet consectetur adipisicing
+                                     elit. Sit et ullam, quos libero sed, impedit id dolores optio, velit
+                                      accusantium sequi nesciunt. Animi voluptas unde architecto totam consectetur
+                                       iste error.
+                                </p>    
+                            </div>
+                        </div>                       
+                    </div>
+                    <div class="flex-row">
+                        <div class="flex-col">
+                            <div class="info-panel">
+                                <svg class="icon info-panel__icon">
+                                    <use xlink:href="/img/svg/sprite.svg#two-pictures-svgrepo-com"></use>
+                                  </svg>
+                                <h3 class="sub-heading mrgn-btm--sm">Land, Sea, and Air</h3>
+                                <p class="info mrgn-btm--med">Lorem ipsum dolor sit amet consectetur
+                                     adipisicing elit. Sit et ullam, quos libero sed, impedit id dolores optio,
+                                      velit accusantium sequi nesciunt. Animi voluptas unde architecto totam
+                                       consectetur iste error. Lorem ipsum dolor sit amet consectetur adipisicing
+                                       elit. Sit et ullam, quos libero sed, impedit id dolores optio, velit
+                                        accusantium sequi nesciunt. Animi voluptas unde architecto totam consectetur
+                                         iste error.
+                                </p>    
+                            </div>
+                        </div>
+                        <div class="flex-col">
+                            <div class="info-panel">
+                                <svg class="icon info-panel__icon">
+                                    <use xlink:href="/img/svg/sprite.svg#hamac-on-trees-svgrepo-com"></use>
+                                  </svg>
+                                <h3 class="sub-heading mrgn-btm--sm">Bucket list achievement or relaxation</h3>
+                                <p class="info mrgn-btm--med">Lorem ipsum dolor sit amet consectetur adipisicing
+                                     elit. Sit et ullam, quos libero sed, impedit id dolores optio, velit
+                                      accusantium sequi nesciunt. Animi voluptas unde architecto totam consectetur
+                                       iste error. 
+                                </p>    
+                            </div>
+                        </div>                       
+                    </div>
+                </div>
+            </div>
+            <div class="section-gallery">
+                <figure class="section-gallery__item--1">
+                    <img src="/img/large/milkyway-tent.jpg" alt="Stars and tent." class="section-gallery__img">
+                </figure>
+                <figure class="section-gallery__item--2">
+                    <img src="/img/large/mangrove.jpg" alt="Lush mangrove." class="section-gallery__img">
+                </figure>
+                <figure class="section-gallery__item--3">
+                  <img src="/img/large/hipster-hiking.jpg" alt="Man and woman hiking in Alps." class="section-gallery__img">
+                </figure>
+                <figure class="section-gallery__item--4">
+                    <img src="/img/large/hotspring.jpg" alt="Icelandic hotspring." class="section-gallery__img">
+                </figure>
+                <figure class="section-gallery__item--5">
+                    <img src="/img/large/hike-down.jpg" alt="Hiker at top of a peak." class="section-gallery__img">
+                </figure>
+                <figure class="section-gallery__item--6">
+                  <img src="/img/large/sea-turtle-scuba.jpg" alt="Sea turtle and scuba diver." class="section-gallery__img">
+                </figure>
+                <figure class="section-gallery__item--7">
+                    <img src="/img/large/orange-tent.jpg" alt="Orange tent against indigo night sky." class="section-gallery__img">
+                </figure>
+                <figure class="section-gallery__item--8">
+                  <img src="/img/large/journey-begins.jpg" alt="Young woman at start of a hike." class="section-gallery__img">
+                </figure>
+                <figure class="section-gallery__item--9">
+                  <img src="/img/large/kayak-overhead.jpg" alt="Kayaks and boats from an overhead shot." class="section-gallery__img">
+                </figure>
+                <figure class="section-gallery__item--10">
+                  <img src="/img/large/canyon.jpg" alt="Canyon." class="section-gallery__img">
+                </figure>
+                <figure class="section-gallery__item--11">
+                    <img src="/img/large/snorkelgirl.jpg" alt="Girl snorekling." class="section-gallery__img">
+                </figure>
+                <figure class="section-gallery__item--12">
+                    <img src="/img/large/mistymntn.jpg" alt="Hiker on top of foggy mountain." class="section-gallery__img">
+                </figure>
+                <figure class="section-gallery__item--13">
+                    <img src="/img/large/boat.jpg" alt="Boat." class="section-gallery__img">
+                </figure>
+                <figure class="section-gallery__item--14">
+                    <img src="/img/large/galaxy.jpg" alt="Stargazer underneath the night sky." class="section-gallery__img">
+                </figure>
+                <figure class="section-gallery__item--15">
+                  <img src="/img/large/brown-turtle.jpg" alt="Sea turtle with snorkeler." class="section-gallery__img">
+                </figure>
+            </div>
+            <div class="section-trips">
 
+            </div>
+            <div class="section-packages">
+
+            </div>
+            <div class="section-reviews">
+              <video src="" class="vid"></video>
+            </div>
+            <div class="section-forms">
+
+            </div>
         </main>
-        <footer>
-
+        <footer role="footer" class="footer text--center">
+            &copy; Design and development: Nathan Trump
         </footer>
+<!--SVG 
+<svg class="icon">
+  <use xlink:href="#hamac-on-trees-svgrepo-com"></use>
+</svg>
+<svg class="icon">
+  <use xlink:href="#head-svgrepo-com"></use>
+</svg>
+<svg class="icon">
+  <use xlink:href="#hotel-cart-svgrepo-com"></use>
+</svg>
+<svg class="icon">
+  <use xlink:href="#mountains-and-sun-svgrepo-com"></use>
+</svg>
+<svg class="icon">
+  <use xlink:href="#orientation-compass-svgrepo-com"></use>
+</svg>
+<svg class="icon">
+  <use xlink:href="#scuba-dive-goggles-svgrepo-com"></use>
+</svg>
+<svg class="icon">
+  <use xlink:href="#sea-placeholder-svgrepo-com"></use>
+</svg>
+<svg class="icon">
+  <use xlink:href="#skiing-glasses-svgrepo-com"></use>
+</svg>
+<svg class="icon">
+  <use xlink:href="#small-hand-bag-svgrepo-com"></use>
+</svg>
+<svg class="icon">
+  <use xlink:href="#tourist-tent-svgrepo-com"></use>
+</svg>
+<svg class="icon">
+  <use xlink:href="#two-oxygen-bottles-with-mask-svgrepo-com"></use>
+</svg>
+<svg class="icon">
+  <use xlink:href="#two-pictures-svgrepo-com"></use>
+</svg>
+<svg class="icon">
+  <use xlink:href="#two-surfing-boards-svgrepo-com"></use>
+</svg>
+<svg class="icon">
+  <use xlink:href="#world-wide-signal-svgrepo-com"></use>
+</svg>
+<svg class="icon">
+  <use xlink:href="#beach-bikini-svgrepo-com"></use>
+</svg>
+<svg class="icon">
+  <use xlink:href="#beach-umbrella-svgrepo-com"></use>
+</svg>
+<svg class="icon">
+  <use xlink:href="#bike-svgrepo-com"></use>
+</svg>
+<svg class="icon">
+  <use xlink:href="#boat-helm-svgrepo-com"></use>
+</svg>
+<svg class="icon">
+  <use xlink:href="#butterfly-hunter-svgrepo-com"></use>
+</svg>
+<svg class="icon">
+  <use xlink:href="#camping-tent-svgrepo-com"></use>
+</svg>
+<svg class="icon">
+  <use xlink:href="#canoe-with-rowing-svgrepo-com"></use>
+</svg>
+<svg class="icon">
+  <use xlink:href="#chain-and-sun-svgrepo-com (1)"></use>
+</svg>
+<svg class="icon">
+  <use xlink:href="#chain-and-sun-svgrepo-com"></use>
+</svg>
+<svg class="icon">
+  <use xlink:href="#direction-arrows-svgrepo-com"></use>
+</svg>
+        -->
     </body>
 </html>

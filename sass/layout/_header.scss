@@ -5,6 +5,7 @@
     background-size: cover;
     clip-path: polygon(50% 0%, 100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
     -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 87%, 50% 100%, 0 87%, 0 0);
+    background-position: center top;
 }
 
 .header__logo {
@@ -14,15 +15,13 @@
     margin-left: 3rem;
 }
 
-.header__text-box {
-    /*font-family: 'Amatic SC', cursive;
-    font-family: 'Homemade Apple', cursive;*/
-    
-    font-family: 'Special Elite', cursive;
+.header__text-box { 
+    font-family: $font-secondary;
     font-weight: 400;
-    padding-top: 5rem;
+    padding-top: 3.25rem;
     line-height: 1.2;
     color: rgba($color-main-black, 0.904);
+    text-transform: uppercase;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;

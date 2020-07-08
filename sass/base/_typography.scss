@@ -1,5 +1,5 @@
 body {
-    font-family: 'Antic', sans-serif;
+    font-family: $font-primary;
     font-size: 16px;
     color: $color-main-black;
 }
@@ -8,6 +8,19 @@ html {
     font-size: 62.5%;
 }
 
-.text--center {
-    text-align: center;
+
+.heading {
+    font-family: $font-secondary;
+    font-size: 4rem;
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+}
+
+.sub-heading {
+    font-size: 2.5rem;
+    letter-spacing: .25rem;
+    background: linear-gradient(to bottom right, $color-secondary-blue, $color-secondary-green, $color-secondary-gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }

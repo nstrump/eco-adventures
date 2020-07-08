@@ -1,0 +1,60 @@
+///////////////////////////////
+//MARGINS
+///////////////////////////////
+
+.mrgn-top--big {
+    margin-top: 10rem;
+}
+
+.mrgn-top--med {
+    margin-top: 5rem;
+}
+
+.mrgn-top--sm {
+    margin-top: 2.5rem;
+}
+
+.mrgn-btm--big {
+    margin-bottom: 10rem;
+}
+
+.mrgn-btm--med {
+    margin-bottom: 5rem;
+}
+
+.mrgn-btm--sm {
+    margin-bottom: 1.5rem;
+}
+
+
+///////////////////////////////
+//ALIGNMENT
+///////////////////////////////
+
+.text--center {
+    text-align: center;
+}
+
+.row {
+    max-width: 114rem;
+    margin: 0 auto;
+}
+
+
+///////////////////////////////
+//FLEXBOX
+///////////////////////////////
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+}
