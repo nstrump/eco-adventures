@@ -1,0 +1,28 @@
+.polaroid-frame {
+    display: flex-column;
+    align-items: center;
+    justify-content: space-around;
+    height: 39.36rem;
+    width: 38.4rem;
+    background-color: $color-main-white;
+    font-family: 'Homemade Apple', cursive;
+    font-size: 2rem;
+    text-align: center;
+    box-shadow: 1px 2px 3px $color-main-black;
+    border-radius: 2px;
+
+    &:hover {
+        z-index: 10;
+        transform: scale(1.1, 1.1);
+        transition: all 0.6s;
+        overflow: hidden;
+        box-shadow: 10px 20px 30px $color-main-black;
+    }
+
+    &__img {
+        width: 33.6rem;
+        height: 27.84rem;
+        object-fit: cover;
+        margin-top: 2rem;
+    }
+}

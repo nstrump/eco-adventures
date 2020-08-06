@@ -26,6 +26,12 @@
     margin-bottom: 1.5rem;
 }
 
+///////////////////////////////
+//PADDING
+///////////////////////////////
+.pd-left--sm {
+    padding-left: 5rem;
+}
 
 ///////////////////////////////
 //ALIGNMENT
@@ -38,6 +44,10 @@
 .row {
     max-width: 114rem;
     margin: 0 auto;
+}
+
+.img--up {
+    object-position: bottom;
 }
 
 
@@ -57,4 +67,20 @@
     flex-direction: column;
     flex-basis: 100%;
     flex: 1;
+}
+
+///////////////////////////////
+POSITIONING
+///////////////////////////////
+
+.bk-pos--cb {
+    background-position: center bottom;
+}
+
+.bk-pos--c {
+    background-position: center;
+}
+
+.bk-pos--custom-1 {
+    background-position: 50% 60%;
 }

@@ -3,9 +3,10 @@
     margin: 0 auto;
     background-image: linear-gradient(to bottom right, rgba($color-main-green, 0.6), rgba($color-main-blue, 0.6), rgba($color-main-gold, 0.6)),url('../img/hero-2.jpg');
     background-size: cover;
-    clip-path: polygon(50% 0%, 100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
-    -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 87%, 50% 100%, 0 87%, 0 0);
+    clip-path: polygon(0 0, 50% 10%, 100% 0, 100% 87%, 50% 100%, 0 87%);
+    -webkit-clip-path: polygon(0 0, 50% 10%, 100% 0, 100% 87%, 50% 100%, 0 87%);
     background-position: center top;
+    overflow: hidden;
 }
 
 .header__logo {

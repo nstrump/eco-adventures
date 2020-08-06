@@ -26,7 +26,18 @@
     animation: 12s ease 0s normal forwards 1 fadein;
 }
 
-@keyframes fadein{
+@keyframes btn--fadein{
+    0% { opacity:0; }
+    55% { opacity:0; }
+    100% { opacity:1; }
+}
+
+.fadeIn--fast {
+    opacity: 0;
+    animation: 3s ease 0s normal forwards 1 fadein;
+}
+
+@keyframes fadeIn--fast{
     0% { opacity:0; }
     55% { opacity:0; }
     100% { opacity:1; }

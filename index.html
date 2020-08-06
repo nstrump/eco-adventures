@@ -9,6 +9,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Antic&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap" rel="stylesheet">
         <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
@@ -21,26 +22,31 @@
         <link rel="stylesheet" href="sass/main.css">
     </head>
     <body class="site__container">
+      <div class="nav-curtain">
         <header role="header" class="header">
-            <nav role="navigation" class="nav">
-                <div class="header__logo">
-                    <img src="img/svg/mountains-and-sun-svgrepo-com.svg" alt="Logo for Eco-Adventures." class="logo">
-                </div>
-                <div class="nav__box">
-                    &nbsp;
-                    <input type="checkbox" class="nav__checkbox" id="nav-toggle">
-                        <span class="nav__icon"></span>
-                    </label>     
-                </div>
-            </nav>
-            <div class="header__text-box">
-                <h1 class="header__title text--center typewriter">Eco-adventures:</h1>
-                <h2 class="header__slogan text--center fadeIn">Return to Nature</h2>
-            </div>
-            <a href="#" class="btn btn--blk btn--fadeIn" role="button">Explore trips</a> 
-        </header>
+          <nav role="navigation" class="nav">
+              <div class="header__logo">
+                  <img src="img/svg/mountains-and-sun-svgrepo-com.svg" alt="Logo for Eco-Adventures." class="logo">
+              </div>
+              <div class="nav__box">
+                  &nbsp;
+                  <input type="checkbox" class="nav__checkbox" id="nav-toggle">
+                      <span class="nav__icon"></span>
+                  </label>     
+              </div>
+          </nav>
+          <div class="header__text-box">
+              <h1 class="header__title text--center typewriter">Eco-adventures:</h1>
+              <h2 class="header__slogan text--center fadeIn">Return to Nature</h2>
+          </div>
+          <!--would like to change this to a stacked chevron or arrow button that fills color into different parts when clicked-->
+          <a href="#" class="btn btn--blk btn--fadeIn" role="button">Explore trips</a> 
+      </header>
+
+      </div>
         <main>
             <div class="section-about">
+              <!--need custom writeups-->
                 <h2 class="heading text--center mrgn-top--big mrgn-btm--big">Travel the Globe, Leave No Trace</h2>
                 <div class="row">
                     <div class="flex-row">
@@ -128,66 +134,170 @@
                 </div>
             </div>
             <div class="section-gallery">
-                <figure class="section-gallery__item--1">
-                    <img src="/img/large/milkyway-tent.jpg" alt="Stars and tent." class="section-gallery__img">
+              <h2 class="heading pd-left--sm">Gallery</h2>
+              <div class="section-gallery__grid">
+                <figure class="polaroid-frame section-gallery__item--1">
+                  <img src="/img/large/milkyway-tent.jpg" alt="Stars and tent." class="polaroid-frame__img img--up">
+                  <figcaption>Just the fire and stars...</figcaption>
                 </figure>
-                <figure class="section-gallery__item--2">
-                    <img src="/img/large/mangrove.jpg" alt="Lush mangrove." class="section-gallery__img">
+                <figure class="polaroid-frame section-gallery__item--2">
+                    <img src="/img/large/mangrove.jpg" alt="Lush mangrove." class="polaroid-frame__img">
+                    <figcaption>Mangrove canopy</figcaption>
                 </figure>
-                <figure class="section-gallery__item--3">
-                  <img src="/img/large/hipster-hiking.jpg" alt="Man and woman hiking in Alps." class="section-gallery__img">
+                <figure class="polaroid-frame section-gallery__item--3">
+                  <img src="/img/large/hipster-hiking.jpg" alt="Man and woman hiking in Alps." class="polaroid-frame__img img--up">
+                  <figcaption>Adventure onward</figcaption>
                 </figure>
-                <figure class="section-gallery__item--4">
-                    <img src="/img/large/hotspring.jpg" alt="Icelandic hotspring." class="section-gallery__img">
+                <figure class="polaroid-frame section-gallery__item--4">
+                    <img src="/img/large/hotspring.jpg" alt="Icelandic hotspring." class="polaroid-frame__img">
+                    <figcaption>Hot springs in Iceland.</figcaption>
                 </figure>
-                <figure class="section-gallery__item--5">
-                    <img src="/img/large/hike-down.jpg" alt="Hiker at top of a peak." class="section-gallery__img">
+                <figure class="polaroid-frame section-gallery__item--5">
+                    <img src="/img/large/hike-down.jpg" alt="Hiker at top of a peak." class="polaroid-frame__img">
+                    <figcaption>Summit!</figcaption>
                 </figure>
-                <figure class="section-gallery__item--6">
-                  <img src="/img/large/sea-turtle-scuba.jpg" alt="Sea turtle and scuba diver." class="section-gallery__img">
+                <figure class="polaroid-frame section-gallery__item--6">
+                  <img src="/img/large/sea-turtle-scuba.jpg" alt="Sea turtle and scuba diver." class="polaroid-frame__img">
+                  <figcaption>Scuba diving in Hawaii.</figcaption>
                 </figure>
-                <figure class="section-gallery__item--7">
-                    <img src="/img/large/orange-tent.jpg" alt="Orange tent against indigo night sky." class="section-gallery__img">
+                <figure class="polaroid-frame section-gallery__item--7">
+                    <img src="/img/large/orange-tent.jpg" alt="Orange tent against indigo night sky." class="polaroid-frame__img img--up">
+                    <figcaption>Solitude</figcaption>
                 </figure>
-                <figure class="section-gallery__item--8">
-                  <img src="/img/large/journey-begins.jpg" alt="Young woman at start of a hike." class="section-gallery__img">
+                <figure class="polaroid-frame section-gallery__item--8">
+                  <img src="/img/large/journey-begins.jpg" alt="Young woman at start of a hike." class="polaroid-frame__img">
+                  <figcaption>First step of the journey...</figcaption>
                 </figure>
-                <figure class="section-gallery__item--9">
-                  <img src="/img/large/kayak-overhead.jpg" alt="Kayaks and boats from an overhead shot." class="section-gallery__img">
+                <figure class="polaroid-frame section-gallery__item--9">
+                  <img src="/img/large/kayak-overhead.jpg" alt="Kayaks and boats from an overhead shot." class="polaroid-frame__img">
+                  <figcaption>Kayaking in Eastern Europe</figcaption>
                 </figure>
-                <figure class="section-gallery__item--10">
-                  <img src="/img/large/canyon.jpg" alt="Canyon." class="section-gallery__img">
+                <figure class="polaroid-frame section-gallery__item--10">
+                  <img src="/img/large/canyon.jpg" alt="Canyon." class="polaroid-frame__img">
+                  <figcaption>Canyon river</figcaption>
                 </figure>
-                <figure class="section-gallery__item--11">
-                    <img src="/img/large/snorkelgirl.jpg" alt="Girl snorekling." class="section-gallery__img">
+                <figure class="polaroid-frame section-gallery__item--11">
+                    <img src="/img/large/snorkelgirl.jpg" alt="Girl snorekling." class="polaroid-frame__img">
+                    <figcaption>Snorkeling in Fiji!</figcaption>
                 </figure>
-                <figure class="section-gallery__item--12">
-                    <img src="/img/large/mistymntn.jpg" alt="Hiker on top of foggy mountain." class="section-gallery__img">
+                <figure class="polaroid-frame section-gallery__item--12">
+                    <img src="/img/large/mistymntn.jpg" alt="Hiker on top of foggy mountain." class="polaroid-frame__img">
+                    <figcaption>Misty mountain top</figcaption>
                 </figure>
-                <figure class="section-gallery__item--13">
-                    <img src="/img/large/boat.jpg" alt="Boat." class="section-gallery__img">
+                <figure class="polaroid-frame section-gallery__item--13">
+                    <img src="/img/large/boat.jpg" alt="Boat." class="polaroid-frame__img">
+                    <figcaption>Rowing.</figcaption>
                 </figure>
-                <figure class="section-gallery__item--14">
-                    <img src="/img/large/galaxy.jpg" alt="Stargazer underneath the night sky." class="section-gallery__img">
+                <figure class="polaroid-frame section-gallery__item--14">
+                    <img src="/img/large/galaxy.jpg" alt="Stargazer underneath the night sky." class="polaroid-frame__img">
+                    <figcaption>Just me and the stars</figcaption>
                 </figure>
-                <figure class="section-gallery__item--15">
-                  <img src="/img/large/brown-turtle.jpg" alt="Sea turtle with snorkeler." class="section-gallery__img">
+                <figure class="polaroid-frame section-gallery__item--15">
+                  <img src="/img/large/brown-turtle.jpg" alt="Sea turtle with snorkeler." class="polaroid-frame__img">
+                  <figcaption>Snorkeling in Australia</figcaption>
                 </figure>
-            </div>
-            <div class="section-trips">
+              </div>
 
+            </div>
+            <div class="section-trips mrgn-top--big mrgn-btm--big">
+              <!--this section will feature a slideable/extendable flexbox card system with icons for activities-->
+              <h2 class="heading text--center mrgn-btm--big">What We Do</h2>
+              <div class="cards" id="card-container">
+                <div class="card active" style="background-image: url('../../img/small/scuba.jpg')">
+                  <div class="card__icon-box">
+                    <svg class="card__icon">
+                      <use xlink:href="/img/svg/sprite.svg#two-oxygen-bottles-with-mask-svgrepo-com"></use>
+                    </svg>
+                  </div>
+                  <div class="card__banner">
+                    <h3 class="card__heading">Scuba Diving</h3>
+                    <p class="card__text">We offer experienced scuba divers advanced, sought-after exploration.</p>
+                    <div class="card__btn">Learn more</div>
+                  </div>                
+                </div>
+                <div class="card" style="background-image: url('../../img/small/snorkel-re.jpg')">
+                  <div class="card__icon-box">
+                    <svg class="card__icon">
+                      <use xlink:href="/img/svg/sprite.svg#scuba-dive-goggles-svgrepo-com"></use>
+                    </svg>
+                  </div>      
+                  <div class="card__banner">
+                    <h3 class="card__heading">Snorkeling</h3>
+                    <p class="card__text">Snorkeling in globally unique areas.</p>
+                  </div>            
+                </div>
+                <div class="card" style="background-image: url('../../img/small/kayak.jpg')">
+                  <div class="card__icon-box">
+                    <svg class="card__icon">
+                      <use xlink:href="/img/svg/sprite.svg#canoe-with-rowing-svgrepo-com"></use>
+                    </svg>
+                  </div>   
+                  <div class="card__banner">
+                    <h3 class="card__heading">Kayaking</h3>
+                    <p class="card__text">Novice and experienced alike will thrill at our waters.</p>
+                  </div>              
+                </div>
+                <div class="card bk-pos--cb" style="background-image: url('../../img/small/camp.jpg'); background-position: center bottom">
+                  <div class="card__icon-box">
+                    <svg class="card__icon">
+                      <use xlink:href="/img/svg/sprite.svg#camping-tent-svgrepo-com"></use>
+                    </svg>                  
+                  </div>
+                  <div class="card__banner">
+                    <h3 class="card__heading">Camping</h3>
+                    <p class="card__text">Site camp while preserving the local environment.</p>
+                  </div>
+                </div>
+                <div class="card bk-pos--cb" style="background-image: url('../../img/small/hiking.jpg')">
+                  <div class="card__icon-box">
+                    <svg class="card__icon">
+                      <use xlink:href="/img/svg/sprite.svg#orientation-compass-svgrepo-com"></use>
+                    </svg>
+                  </div>
+                  <div class="card__banner">
+                    <h3 class="card__heading">Hiking</h3>
+                    <p class="card__text">Hikers of all abilities, we've found your path.</p>
+                  </div>
+                </div>
+                <div class="card" style="background-image: url('../../img/small/bike-re.jpg')">
+                  <div class="card__icon-box">
+                    <svg class="card__icon">
+                      <use xlink:href="/img/svg/sprite.svg#bike-svgrepo-com"></use>
+                    </svg>
+                  </div>
+                  <div class="card__banner">
+                    <h3 class="card__heading">Mountain Biking</h3>
+                    <p class="card__text">Hit some bucket list trails.</p>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="section-packages">
 
             </div>
             <div class="section-reviews">
-              <video src="" class="vid"></video>
+              <!--this section will implement javascript to insert multiple videos underneath the review sheet-->
+              <div class="section-reviews__vid">
+                <video src="img/coverr-tent-on-mountain-top-1585312178298.mp4" class="vid" width="100%" height="100%" autoplay muted loop>
+                  Your browser does not support video.
+                </video>  
+              </div>
+              <div class="section-reviews__header">
+                <h2 class="heading text--center">Real Experiences, First Hand</h2>
+              </div>              
+              <div class="review-box row">
+                <img src="img/large/photo-of-woman-sitting-on-stone-next-to-body-of-water-2101774.jpg" alt="Reviewer sitting on stone." class="review-box__img">
+                <p class="review-box__text">BlAH</p>
+              </div>
             </div>
             <div class="section-forms">
 
             </div>
         </main>
         <footer role="footer" class="footer text--center">
+          <!--footer will either use the svg logo blown up with the bottom hole having a matching background, or 
+
+          -->
             &copy; Design and development: Nathan Trump
         </footer>
 <!--SVG 
@@ -264,5 +374,7 @@
   <use xlink:href="#direction-arrows-svgrepo-com"></use>
 </svg>
         -->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script type="text/javascript" src="js/active.js"></script>
     </body>
 </html>

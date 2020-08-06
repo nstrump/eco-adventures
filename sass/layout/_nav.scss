@@ -2,6 +2,10 @@
     display: flex;
     justify-content: space-between;
 
+    &-curtain {
+        background: linear-gradient(to bottom, $color-main-black 50%, $color-main-white 50%);
+    }
+
     &__box {
         margin-top: 4.75rem;
         margin-right: 3rem;
@@ -40,7 +44,5 @@
         position: absolute;
         top: 3.8rem;
     }
-
-
 }
 
