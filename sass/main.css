@@ -250,9 +250,18 @@ POSITIONING
   background-position: 50% 60%;
 }
 
+.btn,
 .btn:link,
 .btn:visited {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 175px;
   height: 50px;
   margin: 0 auto;
@@ -260,7 +269,6 @@ POSITIONING
   border-radius: 4rem;
   border: none;
   text-decoration: none;
-  text-align: center;
   text-transform: uppercase;
   padding: 17px 10px;
   font-size: 15px;
@@ -357,16 +365,18 @@ POSITIONING
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
 }
 
 .card__heading {
+  font-family: "Special Elite", cursive;
   margin-top: 2rem;
+  margin-bottom: .5rem;
 }
 
 .card__text {
@@ -377,10 +387,8 @@ POSITIONING
   -webkit-clip-path: polygon(0 0, 0% 100%, 100% 100%);
           clip-path: polygon(0 0, 0% 100%, 100% 100%);
   background-color: orange;
-  min-height: 15rem;
-  max-height: 15rem;
-  min-width: 7.5rem;
-  max-width: 7.5rem;
+  height: 15rem;
+  width: 7.5rem;
   margin-right: 1.25rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -396,6 +404,7 @@ POSITIONING
       -ms-flex-align: center;
           align-items: center;
   overflow: hidden;
+  z-index: 2;
 }
 
 .card__icon {
@@ -406,26 +415,54 @@ POSITIONING
 }
 
 .card__btn {
-  display: inline-block;
-  border-radius: 5px 5px 5px 5px;
-  border: solid 1px black;
-  background-color: orange;
-  padding: 5px;
-  color: #0f0f0f;
   -ms-flex-item-align: end;
       align-self: flex-end;
-  margin-right: 5rem;
-  margin-top: 2.5rem;
+  z-index: 5;
+  position: absolute;
+  bottom: 2rem;
+  right: 2.5rem;
+  height: 3rem;
+  background-color: orange;
+  font-size: 1.5rem;
+  color: #0f0f0f;
+}
+
+.card__info {
+  display: none;
+  position: relative;
+  list-style: none;
+  text-align: center;
+  -webkit-transition: all 1s ease-in;
+  transition: all 1s ease-in;
+  text-transform: uppercase;
+  padding-top: 2rem;
+  width: 40rem;
+  margin: 0 auto;
+  letter-spacing: .5rem;
+  font-family: "Special Elite", cursive;
+}
+
+.card__info li {
+  padding: 1.5rem 0 1rem 0;
+}
+
+.card__info li:not(:last-child) {
+  border-bottom: 1px solid #fff7f7;
+}
+
+.card__info-spanner {
+  height: 100%;
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  padding-top: 5rem;
 }
 
 .card:not(.active) > div.card__banner {
   opacity: 0;
   visibility: hidden;
   display: none;
-}
-
-.card--back {
-  background-color: orange;
 }
 
 .active {

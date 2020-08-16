@@ -41,12 +41,14 @@
         padding-left: 10rem;
         z-index: -1;
         display: flex;
-        flex-wrap: wrap;
         flex-direction: column;
+        transition: all .4s ease-in-out; 
     }
 
     &__heading {
+        font-family: $font-secondary;
         margin-top: 2rem;
+        margin-bottom: .5rem;
     }
 
     &__text {
@@ -56,16 +58,15 @@
     &__icon-box {
         clip-path: polygon(0 0, 0% 100%, 100% 100%);
         background-color: orange;
-        min-height: 15rem;
-        max-height: 15rem;
-        min-width: 7.5rem;
-        max-width: 7.5rem;
+        height: 15rem;
+        width: 7.5rem;
         margin-right: 1.25rem;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
         align-items: center;
         overflow: hidden;
+        z-index: 2;
     }
 
     &__icon {
@@ -76,19 +77,44 @@
     }
 
     &__btn {
-        display: inline-block;
-        border-radius: 5px 5px 5px 5px;
-        border: solid 1px black;
-        background-color: orange;
-        padding: 5px;
-        color: $color-main-black;
         align-self: flex-end;
-        margin-right: 5rem;
-        margin-top: 2.5rem;
+        z-index: 5;
+        position: absolute;
+        bottom: 2rem;
+        right: 2.5rem;
+        height: 3rem;
+        background-color: orange;
+        font-size: 1.5rem;
+        color: $color-main-black;
     }
 
-    &__btn:active {
+    &__info {
+        display: none;
+        position: relative;
+        list-style: none;
+        text-align: center;
+        transition: all 1s ease-in;
+        text-transform: uppercase;
+        padding-top: 2rem;
+        width: 40rem;
+        margin: 0 auto;
+        letter-spacing: .5rem;
+        font-family: $font-secondary;
+    }
 
+    &__info li {
+        padding: 1.5rem 0 1rem 0;
+    }
+
+    &__info li:not(:last-child) {
+        border-bottom: 1px solid $color-main-white;
+    }
+
+     &__info-spanner {
+        height: 100%;
+        backdrop-filter: blur(20px);
+        transition: all .4s ease-in-out;  
+        padding-top: 5rem;   
     }
 
     &:not(.active) {
@@ -98,11 +124,6 @@
             visibility: hidden;
             display: none;
         } 
-    }
-
-    &--back {
-        background-color: orange;
-        
     }
 }
 
@@ -114,10 +135,8 @@
     box-shadow: 10px 10px 10px #000;
     margin-right: 0;
     margin-left: 2.25rem;
-    
 
     &> div.card__banner {
         visibility: visible;
     }
 }
-
