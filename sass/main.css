@@ -164,6 +164,7 @@ html {
   background: -webkit-gradient(linear, left top, right bottom, from(#0b5b7a), color-stop(#037331), to(#998408));
   background: linear-gradient(to bottom right, #0b5b7a, #037331, #998408);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -540,12 +541,88 @@ POSITIONING
   margin-top: 2rem;
 }
 
+.review-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 70%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-clip-path: polygon(97% 0%, 100% 50%, 97% 100%, 0% 100%, 3% 50%, 0% 0%);
+          clip-path: polygon(97% 0%, 100% 50%, 97% 100%, 0% 100%, 3% 50%, 0% 0%);
+  background: rgba(255, 247, 247, 0.6);
+  -webkit-transform: skewX(-12deg);
+          transform: skewX(-12deg);
+  -webkit-box-shadow: 10px 10px 10px 10px #0f0f0f;
+          box-shadow: 10px 10px 10px 10px #0f0f0f;
+  margin-top: -5rem;
+}
+
+.review-box__img-bkgrd {
+  height: 25rem;
+  width: 25rem;
+  padding-right: 1rem;
+  background: -webkit-gradient(linear, left top, right bottom, from(rgba(6, 214, 92, 0.8)), color-stop(rgba(19, 160, 216, 0.8)), to(rgba(243, 210, 20, 0.8)));
+  background: linear-gradient(to bottom right, rgba(6, 214, 92, 0.8), rgba(19, 160, 216, 0.8), rgba(243, 210, 20, 0.8));
+  -webkit-transform: skewX(12deg);
+          transform: skewX(12deg);
+}
+
 .review-box__img {
-  display: inline-block;
-  height: 4rem;
-  width: 4rem;
+  height: 25rem;
+  width: 25rem;
   -o-object-position: center;
      object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-left: -2.75rem;
+}
+
+.review-box__review {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-left: 5rem;
+}
+
+.review-box__header {
+  font-size: 3.5rem;
+}
+
+.review-box__text {
+  padding: 2.5rem 3rem;
+  font-size: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 80%;
+  -ms-flex-preferred-size: fill;
+      flex-basis: fill;
+}
+
+.review-box__quote-mark {
+  font-size: 6rem;
+  background: -webkit-gradient(linear, left top, right bottom, from(#0b5b7a), color-stop(#037331), to(#998408));
+  background: linear-gradient(to bottom right, #0b5b7a, #037331, #998408);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.review-box__author {
+  padding-left: 3rem;
 }
 
 .vid {
@@ -818,9 +895,20 @@ POSITIONING
 }
 
 .section-reviews {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   position: relative;
   -webkit-clip-path: polygon(0 0, 50% 5%, 100% 0, 100% 95%, 50% 100%, 0 95%);
           clip-path: polygon(0 0, 50% 5%, 100% 0, 100% 95%, 50% 100%, 0 95%);
+  height: 150rem;
 }
 
 .section-reviews__vid {
@@ -834,6 +922,6 @@ POSITIONING
 }
 
 .section-reviews__header {
-  padding-top: 10rem;
+  padding-top: 7.5rem;
 }
 /*# sourceMappingURL=main.css.map */

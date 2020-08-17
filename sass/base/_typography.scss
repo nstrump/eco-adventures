@@ -22,5 +22,6 @@ html {
     letter-spacing: .25rem;
     background: linear-gradient(to bottom right, $color-secondary-blue, $color-secondary-green, $color-secondary-gold);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }

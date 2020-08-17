@@ -1,9 +1,62 @@
 .review-box {
 
+    display: flex;
+    width: 70%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    clip-path: polygon(97% 0%, 100% 50%, 97% 100%, 0% 100%, 3% 50%, 0% 0%);
+    background: rgba($color-main-white, 0.6);
+    transform: skewX(-12deg);
+    box-shadow: 10px 10px 10px 10px $color-main-black;
+    margin-top: -5rem;
+    
+
+    &__img-bkgrd {
+        height: 25rem;
+        width: 25rem;
+        padding-right: 1rem;
+        background: linear-gradient(to bottom right, rgba($color-main-green, 0.8), rgba($color-main-blue, 0.8), rgba($color-main-gold, 0.8));
+        transform: skewX(12deg);
+    }
+
     &__img {
-        display: inline-block;
-        height: 4rem;
-        width: 4rem;
+        height: 25rem;
+        width: 25rem;
         object-position: center;
+        object-fit: cover;
+        margin-left: -2.75rem;
+    }
+
+    &__review {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding-left: 5rem;
+    }
+
+    &__header {
+        //padding-top: 2rem;
+        font-size: 3.5rem;
+    }
+
+    &__text {
+        padding: 2.5rem 3rem;
+        font-size: 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        width: 80%;
+        flex-basis: fill;
+    }
+
+    &__quote-mark {
+        font-size: 6rem;
+        background: linear-gradient(to bottom right, $color-secondary-blue, $color-secondary-green, $color-secondary-gold);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    &__author {
+          padding-left: 3rem;
     }
 }
