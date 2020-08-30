@@ -1,12 +1,29 @@
 .section-about {
     padding-top: 5rem;
-    clip-path: polygon(0 0, 50% 5%, 100% 0, 100% 95%, 50% 100%, 0 95%); 
+    clip-path: polygon(0 0, 50% 0, 100% 0, 100% 95%, 50% 100%, 0 95%); 
+
+    @include respond(phone) {
+        padding-bottom: 7.5rem;
+    }
 }
 
 .section-gallery {
     clip-path: polygon(0 0, 50% 5%, 100% 0, 100% 95%, 50% 100%, 0 95%); 
     background: $color-main-grey;
     padding-top: 25rem;
+    overflow: hidden;
+
+    @include respond(phone) {
+        padding-top: 20rem;
+        padding-bottom: 30rem;
+    }
+
+    &__directions {
+        text-align: center;
+        padding-top: 10rem;
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
     
     &__grid {
         display: grid;
@@ -16,6 +33,12 @@
         column-gap: 1rem;
         row-gap: 1rem;
         padding: 1rem 3rem;
+    }
+
+    &__heading {
+        @include respond(phone) {
+            padding-bottom: 10rem;
+        }
     }
 
     &__item--1 {
@@ -104,7 +127,7 @@
     justify-content: space-evenly;
     position: relative;
     clip-path: polygon(0 0, 50% 5%, 100% 0, 100% 95%, 50% 100%, 0 95%);
-    height: 150rem; 
+    height: 175rem; 
        
     &__vid {
         position: absolute;
@@ -117,6 +140,42 @@
     }
 
     &__header {
-       padding-top: 7.5rem;
+       padding-top: 10rem;
+       padding-bottom: 10rem;
+    }
+}
+
+.section-form {
+    background: linear-gradient(to bottom right, rgba($color-main-green, 1), rgba($color-main-blue, 1), rgba($color-main-gold, 1));
+    clip-path: polygon(0 0, 50% 10%, 100% 0, 100% 95%, 50% 100%, 0 95%); 
+    padding: 25rem 0;
+    margin-top: -23rem;
+
+    &__card {
+        width: 90vw;
+        height: 65rem;
+        margin: 0 auto;
+        background-image: url('../../img/large/heights.jpg');
+        background-size: cover;
+        clip-path: polygon(100% 0, 100% 75%, 50% 100%, 0 75%, 0 0, 50% 15%);
+    }
+}
+
+.section-globe {
+    background: $color-main-grey;
+    clip-path: polygon(0 0, 50% 5%, 100% 0, 100% 95%, 50% 100%, 0 95%);
+    width: 100%;
+    margin-bottom: -10rem;
+    padding-bottom: 10rem;
+
+    &__heading {
+        padding: 20rem 0 10rem 0;
+    }
+
+    &__map {
+        width: 80vw;
+        margin-left: auto;
+        margin-right: auto;
+        overflow: hidden;
     }
 }

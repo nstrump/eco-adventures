@@ -3,9 +3,32 @@
     padding-right: 5rem;
     position: relative;
 
+    @include respond(phone) {
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 4rem;
+    }
+
     &__icon {
         position: absolute;
         left: 0;
         top: 0;
+
+        @include respond(phone) {
+            position: relative;
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    &__heading {
+        @include respond(phone) {
+            text-align: center;
+        }
+    }
+
+    &__paragraph {
+
     }
 }

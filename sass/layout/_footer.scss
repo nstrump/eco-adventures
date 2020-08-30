@@ -1,6 +1,8 @@
 .footer {
+    clip-path: polygon(0 0, 50% 40%, 100% 0, 100% 95%, 50% 100%, 0 95%); 
     background-color: $color-main-black;
     color: $color-main-white;
     display: block;
     padding: 8rem 0;
+    margin-top: -8rem;
 }

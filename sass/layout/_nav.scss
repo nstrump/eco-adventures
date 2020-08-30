@@ -37,6 +37,10 @@
         content: "";
         top: 2.5rem;
         position: absolute;
+
+        @include respond(tab-port) {
+            
+        }
     }
 
     &__icon::after {

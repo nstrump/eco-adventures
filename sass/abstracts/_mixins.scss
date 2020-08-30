@@ -1,0 +1,48 @@
+//////////////////////////////////
+//MEDIA QUERY MIXINS
+//////////////////////////////////
+
+/* MEDIA QUERY MANAGEMENT
+0-480px: phone
+481-768: tablet-portrait
+769-1024: tablet-landscape/small laptop
+1025-1440: desktop/lg laptop
+1441 and up: Large screens
+*/
+
+@mixin phone {
+    @media (max-width: 480px) { @content };
+}
+
+
+/*
+breakpoints:
+-phone
+-tab-port
+-tab-land
+-laptop
+-desktop
+*/
+
+@mixin respond($breakpoint) {
+
+    @if $breakpoint == phone {
+        @media (max-width: 30em) { @content }; //480px
+    }
+
+    @if $breakpoint == tab-port {
+        @media (max-width: 48em) { @content }; //768px
+    }
+
+    @if $breakpoint == tab-land {
+        @media (max-width: 64em) { @content }; //1024px
+    }
+
+    @if $breakpoint == laptop {
+        @media (max-width: 90em) { @content }; //1440px
+    }
+    
+    @if $breakpoint == desktop {
+        @media (min-width: 90.1em) { @content }; //1441.6px
+    }
+}

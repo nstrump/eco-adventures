@@ -44,6 +44,11 @@
 .row {
     max-width: 114rem;
     margin: 0 auto;
+
+    @include respond(phone) {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
 }
 
 .img--up {
@@ -60,13 +65,28 @@
     flex-direction: row;
     width: 100%;
     flex-wrap: wrap;
+
+    @include respond(tab-port) {
+        padding: 0 7.5rem;
+    }
+
+    @include respond(phone) {
+        padding: 0 2rem;
+    }
 }
 
-.flex-col {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 100%;
-    flex: 1;
+.col--2 {
+    max-width: 50%;
+
+    @include respond(tab-land) {
+        padding-left: 3rem;
+    }
+
+    @include respond(tab-port) {
+        max-width: 100%;
+    }
+
+   
 }
 
 ///////////////////////////////

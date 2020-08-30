@@ -18,5 +18,8 @@
 @import "layout/header";
 @import "layout/nav";
 @import "layout/footer";
+@import "layout/form";
+
+@import "../node_modules/@glidejs/glide/src/assets/sass/glide.core.scss";
 
 @import "pages/home";

@@ -1,0 +1,147 @@
+.form {
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 7.5rem;
+
+    &__heading {
+        padding-top: 8.5rem;
+    }
+
+    &__panel--left {
+        background: rgba($color-main-white, .4);
+        height: 100%;
+        width: 50%;
+    }
+
+    &__group:not(:last-child) {
+        margin-bottom: 1.5rem;
+    }
+
+    &__input {
+        padding: 1.5rem 7.5rem;
+        font-family: inherit;
+        color: inherit;
+        font-size: 2rem;
+        border-radius: 5px;
+        background-color: $color-main-white;
+        border: none;
+        border-left: 5px solid transparent;
+        
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 1rem 2rem rgba($color-main-black, .3);
+            border-left: 5px solid $color-main-green;
+        }    
+
+        &:focus:invalid {
+            border-left: 5px solid orange;   
+        }
+
+        &::-webkit-input-placeholder {
+            color: $color-main-grey;
+        }
+    }
+
+
+
+    &__label {
+        display:block;
+        margin-left: 1rem;
+        transition: all .3s;
+
+        &--selector {
+            visibility: hidden;
+            opacity: 0;
+        }
+    }
+
+    &__input:placeholder-shown + &__label {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-4rem);
+    }
+
+    &__selector {
+        font-family: inherit;
+        font-weight: 700;
+        font-size: 1.5rem;
+        padding: 2rem 4rem;
+        border-radius: 5px;
+        background-color: $color-main-white;
+        border: none;
+
+        & option {
+            text-transform: uppercase;
+        }
+    }
+
+    &__button,
+    &__button:link,
+    &__button:visited {
+        background-color: $color-main-black;
+        color: $color-brass;
+        margin-top: 2.5rem;
+        outline: none;        
+
+        &:active {
+            outline: none;
+        }
+    }
+
+    &__radio {
+        display: flex;
+        flex-direction: row;
+        margin-top: 1.5rem;
+
+        &__header {
+            font-size: 3rem;
+        }
+
+        &-input {
+            display: none;
+        }
+
+        &-label {
+            font-size: 2rem; 
+            cursor: pointer;
+            position: relative;  
+            padding-left: 2rem;  
+        }
+
+        &-group {
+            padding: 0 2rem;
+        }
+
+        &-button {
+            height: 2rem;
+            width: 2rem;
+            border: 3px solid $color-main-black;
+            border-radius: 50%;
+            display: inline-block;
+            position: absolute;
+            left: -1rem;
+        }
+
+        
+        &-button::after {
+            content: "";
+            height: 1.3rem;
+            width: 1.3rem;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: $color-brass;
+            opacity: 0;
+            transition: opacity .2s;
+        }
+    }
+}
+
+.form__radio-input:checked ~ .form__radio-label .form__radio-button::after {
+    opacity: 1;
+}

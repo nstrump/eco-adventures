@@ -6,6 +6,22 @@ body {
 
 html {
     font-size: 62.5%;
+
+    @include respond(tab-land) {
+        font-size: 55.5%;
+    }
+
+    @include respond(tab-port) {
+        font-size: 50%;
+    }
+
+    @include respond(phone) {
+        font-size: 40%;
+    }
+
+    @include respond(desktop) {
+        font-size: 80%;
+    }
 }
 
 
@@ -15,6 +31,11 @@ html {
     font-weight: 200;
     text-transform: uppercase;
     letter-spacing: .5rem;
+
+    @include respond(tab-port) {
+        font-size: 3rem;
+        letter-spacing: .25rem;
+    }
 }
 
 .sub-heading {
