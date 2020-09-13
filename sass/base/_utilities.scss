@@ -44,11 +44,6 @@
 .row {
     max-width: 114rem;
     margin: 0 auto;
-
-    @include respond(phone) {
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
 }
 
 .img--up {

@@ -51,7 +51,7 @@
     }
 
     @include respond(phone) {
-        font-size: 4rem;
+        font-size: 3.5rem;
         letter-spacing: .75rem;
     }
 }

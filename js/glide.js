@@ -1,15 +1,21 @@
 $(document).ready(function(){
 
-    $(".info-panel__heading").on(checkSize());
-       
-
+    let glide;
+    let glideStart = false;
+    checkSize();    
+    $(window).resize(checkSize);
+  
     function checkSize() {
-         
-        if ($(".info-panel__heading").css("text-align")  == "center") {
+         console.log('checksize started');
+        if ($(".info-panel__heading").css("text-align")  == "center" && glideStart === false) {
             addGlide();
-        } else {
-            removeGlide();
+            glideStart = true;
+        } else if ($(".info-panel__heading").css("text-align")  != "center" && glideStart === true) {
+            destroyGlide();
+            restoreGrid();
+            glideStart = false;
         }
+        console.log('checksize ended');
     }
 
     function adjustSize() {
@@ -25,21 +31,36 @@ $(document).ready(function(){
         $(".polaroid-frame" ).wrapAll( '<ul class="glide__slides" />');
         $(".polaroid-frame" ).wrap( '<li class="glide__slide"><li/>');
         $(".glide__slides").after('<p class="section-gallery__directions">We think you\'ll want to swipe right on these trip photos.</p>');
-        new Glide('.glide').mount();
+
+        glide=new Glide('.glide').mount();
     }
 
-    function removeGlide() {
+    function destroyGlide() {
+        glide.destroy();
+    }
+
+    function restoreGrid() {
+
+        
         $(".section-gallery__directions").remove();
         $(".polaroid-frame").unwrap();
-        $(".glide__slides").remove();
-        $(".glide__track").remove();
-        $(".glide").remove();
+        $(".polaroid-frame").unwrap();
+        $(".polaroid-frame").unwrap();
+        $(".polaroid-frame").unwrap();
         $(".polaroid-frame").wrapAll('<div class="section-gallery__grid" />');
+
+
+
+        $(".polaroid-frame").addClass(function(index) { 
+            
+            return ` section-gallery__item--${index + 1}`;   
+        
+        });
     }
+    
 
     function modifierClassMatcher(index, className) {
         let matchedClasses = className.match(/(^|\s)section-gallery__item--\S+/g);
         return (matchedClasses || []).join('');
     }
 });
-
