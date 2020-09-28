@@ -1,52 +1,318 @@
 .nav {
-    display: flex;
-    justify-content: space-between;
-
-    &-curtain {
-        background: linear-gradient(to bottom, $color-main-black 50%, $color-main-white 50%);
-    }
 
     &__box {
-        margin-top: 4.75rem;
-        margin-right: 3rem;
-        display: inline-block;
-        height: 100px;
-        position: relative;
-        z-index: 50;
+        position: fixed;
+        z-index: 1000;
+        top: 3rem;
+        right: -6rem;
+    
+        background-color: $color-main-black;
+        //height: 20rem;
+        //width: 20rem;
+        border-radius: 0 0 0 50%;
+        transform: translate(-50%, -50%);
+        padding: 3rem;
+        cursor: pointer;
+
+        @include respond(phone) {
+        }
     }
 
     &__checkbox {
-        display: none;
-        margin: 0 auto;
+        position: fixed; 
+        top: 3rem;
+        right: 3rem;
+        z-index: 1000;
+        padding: 3rem;
+        cursor: pointer;
+        //text-indent: -9999em;
+        
+        &:focus {
+            outline-width: thick;
+            outline-offset: 50px;
+        }
     }
 
     &__icon,
     &__icon::before,
     &__icon::after {
-        width: 3rem;
-        height: 3px;
-        background-color: $color-main-black;
+        width: 4rem;
+        height: .3rem;
+        background-color: $color-main-white;
+        color: $color-main-white;
         display: inline-block;
+        z-index: 100;
+        transition: all .5s ease-in;
     }
 
     &__icon {
-        
+        position: relative;
     }
 
     &__icon::before {
         content: "";
-        top: 2.5rem;
         position: absolute;
-
-        @include respond(tab-port) {
-            
-        }
+        top: -1.25rem;
     }
+    
 
     &__icon::after {
         content: "";
         position: absolute;
-        top: 3.8rem;
+        top: 1.25rem;
+    }
+
+    &__page {
+        position: fixed;
+        width: 0;
+        height: 0;
+        top: 0;
+        right: 0;
+        opacity: 0;
+        //active class will toggle display from fixed to none
+        background: linear-gradient(to bottom right, rgba($color-main-green, 1), rgba($color-main-blue, 1), rgba($color-main-gold, 1));
+        z-index: 500;
+        transition: width 1s ease-in;
+    }
+
+    &__header {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 10%;
+        transition: opacity 2s ease-in, visibility 2s ease-in;
+        visibility: hidden;
+        opacity: 0;
+
+        @include respond(phone) {
+            font-size: 5rem;
+        }
+    }
+
+    &__menu {
+        background-color: orange;
+        width: 100px;
+        height: 100px;
+        margin: 0 auto;
+        position: relative;
+        color: $color-main-white;
+        z-index: 750;
+        transition: opacity 3s ease-in, visibility 3s ease-in;
+        visibility: hidden;
+        opacity: 0;
+
+        @include respond(phone) {
+            background-color: transparent;
+        }
+    }
+
+    &__checkbox:checked ~ &__page {
+        padding-top: 48vh;
+        width: 100vw;
+        height: 100vh;
+        opacity: 1;
+        top: 0;
+        right: 0;
+        
+        @include respond(phone) {
+            padding-top: 30vh;
+        }
+    }
+
+    &__checkbox:checked ~ &__page > * {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    &__checkbox:checked ~ &__box &__icon::before {
+        top: 0;
+        transform: rotate(135deg);
+    }
+
+    &__checkbox:checked ~ &__box &__icon {
+       background-color: transparent;
+    }
+
+    &__checkbox:checked ~ &__box &__icon::after {
+        top: 0;
+        transform: rotate(-135deg);
+    }
+    
+    &-list {
+        list-style: none;
+        text-decoration: none;
+        margin: 0 auto;
+        position: relative;
+
+        & > li { 
+            @include respond(phone) {
+                transform: rotateZ(0);
+                writing-mode: horizontal-tb;
+                letter-spacing: 2px;
+                padding: 2rem 0rem;
+                margin-top: 2rem;
+                left: 0;
+                right: 0;
+                top: 0;
+                height: 5rem;
+            }
+        }
+
+        & > li a {
+            @include respond(phone) {
+                transform: rotate(0);
+            }
+        }
+
+        &__item,
+        &__link {
+            text-decoration: none;
+            color: $color-main-white;
+        }
+
+        &__item {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            align-content: center;
+            background-color: $color-main-black;
+            position: absolute;
+            color: $color-main-white;
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+            height: 200px;
+            width: 50px;
+            padding: 50px; 
+            
+            @include respond(phone) {
+                clip-path: none;
+                position: relative;
+                background-color: transparent;
+                font-size: 5rem;
+                justify-content: start;
+                align-content: space-between;
+                align-items: center;
+            }
+
+            &--1 {
+                writing-mode: vertical-lr;
+                text-orientation: upright;
+                left: 50%;
+                top: -100px;
+                transform: translate(-50%, -50%);
+                letter-spacing: 15px;
+            }
+
+            &--2 {
+                transform: rotateZ(45deg);
+                top: -135px;
+                left: 100px;
+                writing-mode: vertical-lr;
+                text-orientation: upright;
+                letter-spacing: 5px;                
+            }
+
+            &--3 {
+                transform: rotateZ(90deg);
+                right: -150px;
+                top: -50px;
+                writing-mode: vertical-lr;
+                letter-spacing: 10px;                
+            }
+
+            &--4 {
+                transform: rotateZ(135deg);
+                top: 35px;
+                left: 100px;
+                writing-mode: vertical-lr;
+                text-orientation: upright;
+                letter-spacing: 4px;
+            }
+
+            &--5 {
+                transform: translate(-50%, -50%);
+                transform: rotateZ(180deg);
+                left: 0;
+                top: 100px;
+                writing-mode: vertical-lr;
+                text-orientation: upright;
+                letter-spacing: 5px;                
+            }
+
+            &--6 {
+                transform: rotateZ(225deg);
+                top: 35px;
+                right: 100px;
+                writing-mode: vertical-lr;
+                text-orientation: upright;
+                z-index: 2;
+                letter-spacing: -2px;               
+            }
+
+            &--7 {
+                transform: rotateZ(-90deg);
+                left: -150px;
+                top: -50px;
+                writing-mode: vertical-lr;
+                letter-spacing: 10px;                
+            }
+
+            &--8 {
+                transform: rotateZ(-45deg);
+                top: -135px;
+                right: 100px;
+                writing-mode: vertical-lr;
+                text-orientation: upright;
+            }
+        }
+
+        &__link {
+            z-index: 3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            margin-bottom: 50px;
+            margin-left: -9px;             
+            
+            &:hover {
+                color: $color-main-gold;
+            }
+
+            &:active {
+                
+            }
+        }
     }
 }
 
+.nav li:nth-of-type(3) a {
+    transform: rotate(180deg);
+
+    @include respond(phone) {
+        transform: rotate(0);
+    }
+}
+
+.nav li:nth-of-type(4) a {
+    transform: rotate(180deg);
+
+    @include respond(phone) {
+        transform: rotate(0);
+    }
+}
+
+.nav li:nth-of-type(5) a {
+    transform: rotate(180deg); 
+
+    @include respond(phone) {
+        transform: rotate(0);
+    }
+}
+
+.nav li:nth-of-type(6) a {
+    transform: rotate(180deg); 
+
+    @include respond(phone) {
+        transform: rotate(0);
+    }
+}

@@ -6,7 +6,6 @@ $(document).ready(function(){
     $(window).resize(checkSize);
   
     function checkSize() {
-         console.log('checksize started');
         if ($(".info-panel__heading").css("text-align")  == "center" && glideStart === false) {
             addGlide();
             glideStart = true;
@@ -15,7 +14,6 @@ $(document).ready(function(){
             restoreGrid();
             glideStart = false;
         }
-        console.log('checksize ended');
     }
 
     function adjustSize() {

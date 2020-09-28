@@ -1,0 +1,70 @@
+.modal {
+
+    display: block;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba($color-main-black, .99);
+    z-index: 9000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s ease-out;
+
+    &__close {
+        position: absolute;
+        top: 5%;
+        right: 5%;
+        font-size: 2.5rem;
+        color: $color-main-black;
+        transition: color .3s fade-in;
+        text-decoration: none;
+        
+        &:hover {
+            color: $color-secondary-green;
+        }
+    }
+
+    &__window {
+        position: absolute;
+        background-color: rgba($color-main-white, 1);
+        width: 75%;
+        border-radius: 10px;
+        padding: 3rem 10rem;
+        
+        @include absolutePos;
+
+        @include respond(phone) {
+            font-size: 2.5rem;
+            padding: 1rem;
+        }
+    }
+
+    &__header {
+        font-size: 4rem;
+        padding-bottom: 5rem;
+    }
+
+    &__disclaimer {
+
+        font-size: 2rem;
+        column-count: 2;
+        column-gap: 5rem;
+        column-rule: 1.5px solid $color-main-grey;
+        hyphens: auto;
+
+        @include respond(phone) {
+            column-count: 1;
+        }
+    }
+
+    &__button {
+        padding-bottom: 5rem;
+    }
+}
+
+#modal-window:target {
+    opacity: 1;
+    visibility: visible;
+}

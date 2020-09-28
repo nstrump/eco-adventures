@@ -15,3 +15,7 @@ html body {
     margin: auto;
     background-color: $color-main-white;
 }
+
+::selection {
+    background-color: $color-main-gold;
+}

@@ -173,6 +173,10 @@
         margin-left: auto;
         margin-right: auto;
         overflow: hidden;
+
+        @include respond(phone) {
+            width: 90vw;
+        }
     }
 }
 
@@ -202,7 +206,7 @@
        padding-bottom: 10rem;
 
        @include respond(phone) {
-           padding-top: 15rem;
+           padding-top: 25rem;
        }
     }
 

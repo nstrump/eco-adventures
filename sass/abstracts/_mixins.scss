@@ -46,3 +46,18 @@ breakpoints:
         @media (min-width: 90.1em) { @content }; //1441.6px
     }
 }
+
+@mixin absolutePos {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+}
+
+@mixin hiddenAccess {
+    height: 1px;
+    width: 1px;
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    overflow: hidden;
+}
